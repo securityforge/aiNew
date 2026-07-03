@@ -1,0 +1,133 @@
+# ============================================================
+# AI-Assisted Pentest Platform — .gitignore
+# NEVER commit secrets, keys, scan data, or runtime config.
+# ============================================================
+
+# ── Environment files (secrets live here) ───────────────────
+.env
+.env.*
+!.env.example
+!.env.prod.example
+
+# Explicit block for named env files regardless of patterns above
+backend/.env.dev
+backend/.env.prod
+backend/.env.staging
+config/.env.dev
+config/.env.prod
+config/.env.staging
+
+# ── Runtime config files (contain live API keys) ─────────────
+# These are written at runtime by the Settings UI — never commit.
+backend/llm_config.json
+backend/burp_config.json
+backend/*_config.json
+backend/killswitch_state.json
+backend/cookies.txt
+backend/server.err
+
+# ── Credentials & secrets ────────────────────────────────────
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+id_rsa
+id_ed25519
+*.secrets
+secrets.json
+credentials.json
+
+# ── Database files (contain scan findings) ───────────────────
+*.db
+*.sqlite
+*.sqlite3
+backend/dev.db
+backend/*.db
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.pyre/
+*.pyo
+pip-wheel-metadata/
+
+# ── Node / Frontend ──────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+.npm/
+.pnpm-store/
+*.tsbuildinfo
+
+# ── Scan output data (may contain client findings / PII) ─────
+mock-data/outputs/
+scan-outputs/
+reports/
+exports/
+*.sarif
+AI-Assisted-Pentest-workflow_*.irx
+AI-Assisted-Pentest-workflow_*_logs.zip
+backend/dev.db.backup
+
+# ── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+
+# ── IDE ──────────────────────────────────────────────────────
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+.project
+.classpath
+
+# ── OS ───────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ── Celery ───────────────────────────────────────────────────
+celerybeat-schedule
+celerybeat.pid
+
+# ── Testing / Coverage ───────────────────────────────────────
+.coverage
+htmlcov/
+.tox/
+junit.xml
+
+# ── Temporary files ──────────────────────────────────────────
+*.tmp
+*.bak
+*.orig
+*.rej
+tmp/
+temp/
+
+# ── Advisory / Internal Documentation ────────────────────────
+# Code review reports and internal process docs (not versioned)
+docs/advisory/

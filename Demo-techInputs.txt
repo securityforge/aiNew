@@ -1,0 +1,26 @@
+
+
+Tech importance :
+
+LangGraph, both SqliteSaver and the Postgres checkpointer:
+
+The checkpointer stores:
+
+Conversation state
+Agent memory
+Workflow progress
+Human-in-the-loop interruptions
+Recovery points after failures
+----------------------------------
+
+Viper consumes Scout's structured output and performs deep, framework-driven vulnerability analysis. It doesn't just scan — it reasons about the application's behaviour, chains findings across categories, validates each vulnerability with live evidence, and produces a severity-scored intelligence package ready for the pentester to act on. This is the analytical brain that turns raw recon into actionable findings.
+
+
+
+Viper eliminates the bottleneck. The moment QC validates credentials in GSN, Agent Scout takes over — automating the entire reconnaissance phase in 40 to 80 minutes and producing structured, machine-readable context. 
+
+Agent Viper then consumes that context and performs deep intelligence analysis across multiple security frameworks, validating every finding with live evidence. By the time the pentester opens their terminal, they have a complete, severity-scored attack surface map and a prioritised list of findings to verify and expand. No wasted hours. No guesswork. Structured context on day one.
+
+
+
+Pentesters typically begin engagements without a comprehensive attack surface
